@@ -11,15 +11,17 @@ Models
 [] House	Belongs To City
 
 City
-[] Has a Name
+[x] Has a Name
 [x] Seed Data for City
 
 House
-[] Has an address - String
-[] Has Bedrooms - String
-[] Has Bathrooms - String
-[] Has Square Footage - Integer
-[] Has a City_id - Integer
+[x] Has an address - String
+[x] Has Bedrooms - Integer
+[x] Has Bathrooms - Integer
+[x] Has Square Footage - Integer
+[] Has Price - Integer
+[x] Has a City_id - Integer
+[] Seed Data For Houses
 
 
 House Stretch Goal
