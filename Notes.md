@@ -1,5 +1,5 @@
 JavaScript Project
-HouseHuntr-Backend goals
+
 
 
 [x] Create repo
@@ -35,5 +35,15 @@ Barbados = House.create(address: '114 Barbados', bedrooms: 4, bathrooms: 2, squa
 Sunbriar = House.create(address: '23 Sunbriar', bedrooms: 3, bathrooms: 3, square_foot: 1600, price: 190000, city_id: Pooler.id)
 Jasper = House.create(address: '247 Jasper', bedrooms: 4, bathrooms: 2, square_foot: 1700, price: 249000, city_id: Rincon.id) -->
 
+
+[] Can add new cities
+[] Can update cities
+[] Can delete cities
+
+[] Can add new homes
+[] Can update houses
+[] Can delete houses
+
+
 House Stretch Goal
-[] Has an Image
+[] Can add an Image
