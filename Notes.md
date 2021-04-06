@@ -1,5 +1,5 @@
 JavaScript Project
-HouseHuntr
+HouseHuntr-Backend goals
 
 
 [x] Create repo
@@ -20,7 +20,7 @@ House
 [x] Has Bathrooms - Integer
 [x] Has Square Footage - Integer
 [x] Has Price - Integer
-[x] Has a City_id - Integer
+[x] Has city_id - Integer
 [x] Seed Data For Houses
 
  <!-- City Seed Data

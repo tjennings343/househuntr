@@ -2,18 +2,18 @@ class HousesController < ApplicationController
 
     def index
         houses = House.all
-        render json: houses, except: [:created_at, :updated_at]
+        render json: HouseSerializer.new(houses)
     end
 
     def show
         house = House.find(params[:id])
-        render json: house, except: [:created_at, :updated_at]
+        render json: HouseSerializer.new(house)
     end
 
     def create
         house = House.new(house_params)
         if house.save
-            render json: house
+            render json: HouseSerializer.new(house)
         else
             render json: {error: 'House could not be created!'}
         end
@@ -28,7 +28,7 @@ class HousesController < ApplicationController
     def update
         house = House.find(params[:id])
         house.update(house_params)
-        render json: house
+        render json: HouseSerializer.new(house)
     end
 
     private

@@ -24,9 +24,11 @@ ActiveRecord::Schema.define(version: 2021_04_02_150901) do
     t.integer "bathrooms"
     t.integer "square_foot"
     t.integer "price"
-    t.integer "city_id"
+    t.integer "city_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["city_id"], name: "index_houses_on_city_id"
   end
 
+  add_foreign_key "houses", "cities"
 end

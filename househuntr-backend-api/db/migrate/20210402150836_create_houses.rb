@@ -6,7 +6,7 @@ class CreateHouses < ActiveRecord::Migration[6.1]
       t.integer :bathrooms
       t.integer :square_foot
       t.integer :price
-      t.integer :city_id
+      t.belongs_to :city, null: false, foreign_key: true
 
       t.timestamps
     end

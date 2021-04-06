@@ -2,11 +2,11 @@ class CitiesController < ApplicationController
 
     def index
         cities = City.all
-        render json: cities, only: :name
+        render json: CitySerializer.new(cities)
     end
 
     def show
         city = City.find(params[:id])
-        render json: city, only: :name
+        render json: CitySerializer.new(city)
     end
 end
