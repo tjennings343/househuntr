@@ -7,7 +7,12 @@ class HousesAdapter{
         fetch(this.baseUrl)
         .then(res => res.json())
         .then(response => {
-            console.log(response)
+            response.data.forEach(el => {
+                let house = new House(el.attributes)
+                house.attachToDom(el)
+            })
         })
     }
+
+    
 }
