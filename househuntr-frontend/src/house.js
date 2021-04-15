@@ -37,7 +37,6 @@ class House{
         <span class="sqft">${this.sqft}sqft</span><br>
         <strong class="price">${this.price}usd</strong><br><br>
         </li>
-        <button class="delete" data-id="${this.id}">Delete</button>
         <button class="update" data-id="${this.id}">Update</button>
         `
         return this.element   

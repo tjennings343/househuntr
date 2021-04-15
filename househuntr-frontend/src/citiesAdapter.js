@@ -7,7 +7,10 @@ class CitiesAdapter{
         fetch(this.baseUrl)
         .then(res => res.json())
         .then(response => {
-            console.log(response)
+            response.data.forEach(el => {
+                let city = new City(el.attributes)
+                city.attachCityToDom()
+            })
         })
     }
 }

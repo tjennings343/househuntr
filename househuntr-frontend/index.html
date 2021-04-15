@@ -2,12 +2,13 @@
     <head>
         <meta charset="utf-8">
         <title>HouseHuntr</title>
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
         <h1>Your House Hunt</h1>
             <div class="row">
                 <div class="column">
-                    <h2>Your Cities</h2>
+                    <h2>Cities</h2>
                     <ul id="city-list">
                     </ul>
                 </div>
@@ -18,23 +19,32 @@
                 </div>
             </div>
 
-    <!-- <h3>Add a new house</h3>
-    <form id="new-house-form">
-        <label for="house-address">Address:</label>
-        <input type="text" name="address" id="house-address"><br><br>
-        <label for="house-bedrooms">Bedrooms:</label>
-        <input type="number" name="bedrooms" id="house-bedrooms"><br><br>
-        <label for="house-bathrooms">Bathrooms:</label>
-        <input type="number" name="bathrooms" id="house-bathrooms"><br><br>
-        <label for="house-square-foot">SQFT:</label>
-        <input type="number" name="square-foot" id="house-square-foot"><br><br>
-        <label for="house-price">Price:</label>
-        <input type="number" name="price" id="house-price"><br><br>
-        <input type="submit" value="Add">
-        
-    </form> -->
+    <h3>Add a new house</h3>
+        <div id="new-form-container">    
+            <form id="new-house-form">
+                <label for="house-address">Address:</label>
+                <input type="text" name="address" id="house-address"><br><br>
+                <label for="city">City:</label>
+                <select name="city" id="city">
+                    <option name="city_id" value="1">Savannah</option>
+                    <option name="city_id" value="2">Guyton</option>
+                    <option name="city_id" value="3">Pooler</option>
+                    <option name="city_id" value="4">Rincon</option>
+                </select><br><br>
+                <label for="house-bedrooms">Bedrooms:</label>
+                <input type="number" name="bedrooms" id="house-bedrooms"><br><br>
+                <label for="house-bathrooms">Bathrooms:</label>
+                <input type="number" name="bathrooms" id="house-bathrooms"><br><br>
+                <label for="house-square-foot">SQFT:</label>
+                <input type="number" name="square-foot" id="house-square-foot"><br><br>
+                <label for="house-price">Price:</label>
+                <input type="number" name="price" id="house-price"><br><br>
+                <input type="submit" value="Add">
+            </form>
+        </div>
 
         <script src="src/citiesAdapter.js" type="text/javascript"></script>
+        <script src="src/cities.js" type="text/javascript"></script>
         <script src="src/housesAdapter.js" type="text/javascript"></script>
         <script src="src/house.js" type="text/javascript"></script>
         <script src="index.js" type="text/javascript"></script>
