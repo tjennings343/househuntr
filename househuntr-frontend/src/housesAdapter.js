@@ -7,11 +7,13 @@ class HousesAdapter{
         fetch(this.baseUrl)
         .then(res => res.json())
         .then(response => {
+            console.log('a')
             response.data.forEach(el => {
                 let house = new House(el.attributes)
-                house.attachToDom(el)
+                house.attachToDom()
             })
         })
+        console.log('b')
     }
 
     updateHouse(houseId){
@@ -80,17 +82,14 @@ class HousesAdapter{
         fetch(this.baseUrl, configObj)
         .then(res => res.json())
         .then(response => {
-            console.log(response)
             let house = new House(response.data.attributes)
             house.attachToDom()
         })
 
         newHouseForm.reset()
-
-
-
-
     }
+
+    
     
 }
 

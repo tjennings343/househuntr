@@ -78,8 +78,8 @@ class House{
             else if(e.target.className === 'save'){
             e.target.className = "update"
             e.target.innerText = "Update"
-            housesAdapter.updateHouse(id)
-        }
+            housesAdapter.updateHouse(id)}
+            
     }
 
 

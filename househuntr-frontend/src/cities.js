@@ -17,4 +17,12 @@ class City{
         `
         cityList.append(this.element)
     }
+
+    citySelector(){
+        const cityRoller = document.getElementById('city')
+        const opt = document.createElement('option')
+        opt.value = `${this.id}`
+        opt.innerText = `${this.name}`
+        cityRoller.options.add(opt)
+    }
 }

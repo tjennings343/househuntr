@@ -10,6 +10,7 @@ class CitiesAdapter{
             response.data.forEach(el => {
                 let city = new City(el.attributes)
                 city.attachCityToDom()
+                city.citySelector()
             })
         })
     }
