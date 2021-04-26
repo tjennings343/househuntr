@@ -7,13 +7,11 @@ class HousesAdapter{
         fetch(this.baseUrl)
         .then(res => res.json())
         .then(response => {
-            console.log('a')
             response.data.forEach(el => {
                 let house = new House(el.attributes)
                 house.attachToDom()
             })
         })
-        console.log('b')
     }
 
     updateHouse(houseId){
@@ -87,6 +85,25 @@ class HousesAdapter{
         })
 
         newHouseForm.reset()
+    }
+
+    delete(id){
+        let configObj={
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }
+        }
+
+        fetch(this.baseUrl + `/${id}`, configObj)
+        .then(res => res.json())
+        .then(response => {
+            alert(response.message)
+        })
+        House.all = House.all.filter(h => h.id != id)
+        let house = document.getElementById(`house-${id}`)
+        house.remove()
     }
 
     

@@ -8,7 +8,7 @@ class CitiesAdapter{
         .then(res => res.json())
         .then(response => {
             response.data.forEach(el => {
-                let city = new City(el.attributes)
+                let city = new City(el.attributes) 
                 city.attachCityToDom()
                 city.citySelector()
             })

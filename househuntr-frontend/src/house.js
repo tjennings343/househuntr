@@ -1,4 +1,5 @@
 class House{
+    
     static all =[]
 
     constructor({id, address, bedrooms, bathrooms, square_foot, price, city}){
@@ -17,6 +18,7 @@ class House{
 
     addEventListeners(){
         this.element.addEventListener('click', this.houseEdits)
+
     }
 
 
@@ -38,6 +40,7 @@ class House{
         <strong class="price">${this.price}usd</strong><br><br>
         </li>
         <button class="update" data-id="${this.id}">Update</button>
+        <button class="delete" data-id="${this.id}">Delete</button>
         `
         return this.element   
     }
@@ -79,8 +82,14 @@ class House{
             e.target.className = "update"
             e.target.innerText = "Update"
             housesAdapter.updateHouse(id)}
+            else if(e.target.className === 'delete'){
+                housesAdapter.delete(id)
+            }
+
             
     }
+
+    
 
 
 
