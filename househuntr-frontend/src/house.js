@@ -2,7 +2,7 @@ class House{
     
     static all =[]
 
-    constructor({id, address, bedrooms, bathrooms, square_foot, price, city}){
+    constructor({id, address, bedrooms, bathrooms, square_foot, price, city, city_id}){
         this.id = id
         this.address = address
         this.bedrooms = bedrooms
@@ -10,6 +10,7 @@ class House{
         this.sqft = square_foot
         this.price = price
         this.city = city.name
+        this.city_id = city_id
         this.element = document.createElement('div')
         this.element.id = `house-${this.id}`
 
@@ -23,8 +24,8 @@ class House{
 
 
     attachToDom(){
-        const getHouseList = document.getElementById('house-list')
-        getHouseList.append(this.renderHouse())
+        const houseList = document.getElementById('house-list')
+        houseList.append(this.renderHouse())
         this.addEventListeners()
     }
 
@@ -84,9 +85,7 @@ class House{
             housesAdapter.updateHouse(id)}
             else if(e.target.className === 'delete'){
                 housesAdapter.delete(id)
-            }
-
-            
+            }       
     }
 
     

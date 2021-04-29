@@ -4,19 +4,33 @@ class City{
     constructor({id, name}){
         this.id = id
         this.name = name
-        this.element = document.createElement('div')
+        this.cityList = document.getElementById('city-list')
+        this.element = document.createElement('li')
         this.element.id = `city-${this.id}`
 
         City.all.push(this)
     }
 
-    attachCityToDom(){
-        const cityList = document.getElementById('city-list')
+    attachCityToDom(){   
+        this.cityList.append(this.cityRender())
+        this.addEventListeners()
+    }
+
+    addEventListeners(){
+        this.element.addEventListener('click', this.cityClick)
+    }
+
+    cityClick(){
+        console.log('inside city click')
+    }
+
+    cityRender(){
         this.element.innerHTML = `
         <h2>${this.name}</h2>
         `
-        cityList.append(this.element)
+        return this.element
     }
+
 
     citySelector(){
         const cityRoller = document.getElementById('city')
@@ -25,4 +39,10 @@ class City{
         opt.innerText = `${this.name}`
         cityRoller.options.add(opt)
     }
+
+    
+
+    
+
+
 }
