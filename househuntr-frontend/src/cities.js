@@ -20,8 +20,17 @@ class City{
         this.element.addEventListener('click', this.cityClick)
     }
 
-    cityClick(){
-        console.log('inside city click')
+    get houses(){
+        return House.all.filter(h => h.city_id == this.id)
+    }
+
+    cityClick = (e) => {
+        const houseList = document.getElementById('house-list')
+        houseList.innerHTML= ""
+        this.houses.forEach(h => {
+            h.attachToDom()
+        })
+        
     }
 
     cityRender(){
